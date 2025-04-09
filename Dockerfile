@@ -7,7 +7,7 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:23-jdk-alpine
 EXPOSE 8080
-RUN --mount=type=secret,id=gcloud,dst=/tmp/gcloud/application_default_credentials.json cat /etc/secrets/application_default_credentials.json
+RUN --mount=type=secret,id=gcloud,dst=/tmp/gcloud/application_default_credentials.json cp /etc/secrets/application_default_credentials.json
 #COPY /etc/secrets/application_default_credentials.json /tmp/gcloud/application_default_credentials.json
 COPY --from=builder /target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
