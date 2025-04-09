@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/story")
 public class StoryController {
 
-    private Logger logger = LoggerFactory.getLogger(StoryController.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(StoryController.class.getName());
 
     @Autowired
     private StoryService storyService;

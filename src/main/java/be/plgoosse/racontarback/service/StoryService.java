@@ -2,8 +2,6 @@ package be.plgoosse.racontarback.service;
 
 import be.plgoosse.racontarback.dto.StoryCreationDTO;
 import be.plgoosse.racontarback.dto.StoryDTO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.PromptTemplate;
